@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout</title>
+    <style>
+        html, body,div{
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,body{
+            height: 100%;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column
+        }
+
+        .flex-column{
+            display: flex;
+            flex-direction: column
+        }
+
+        .flex-row{
+            display: flex;
+            flex-direction: row
+        }
+
+        .flex-fill{
+            flex:1 1 auto;
+        }
+
+        .flex-fixed-60{
+            flex:0 0 60px;
+        }
+
+        .flex-fixed-200{
+            flex:0 0 200px;
+        }
+        
+        .header, .content, .left, .center, .top, .middle, .bottom, .right, .footer{
+            border: solid 1px gray;
+        }
+
+
+    </style>
+</head>
+<body class="flex-column">
+    <header class="header flex-fixed-60"></header>
+    <div class="content flex-row flex-fill">
+        <div class="left flex-fixed-200"></div>
+        <div class="center flex-column flex-fill">
+            <div class="top flex-fixed-60"></div>
+            <div class="middle flex-fill"></div>
+            <div class="bottom flex-fixed-60"></div>
+        </div>
+        <div class="right flex-fixed-200"></div>
+        
+    </div>
+    <footer class="footer flex-fixed-60"></footer>
+</body>
+</html>
